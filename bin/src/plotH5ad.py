@@ -25,7 +25,8 @@ def checkGene(selG):
         exit()
 def checkGrp(grp,allGrp):
     if not grp in allGrp:
-        print("ERROR: annotation ("+grp+") is unknown in the h5ad file!")
+        print("ERROR: annotation ("+grp+") is unknown in the h5ad file (" +\
+              str(allGrp) +")!")
         exit()
 def filterCell(df,gCut,logFlag=False):
     if gCut is not None:
