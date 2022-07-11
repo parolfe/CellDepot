@@ -1,6 +1,5 @@
 <?php
 
-
 //Figure out absolute URL from a relative url
 // $reference_url must end with a file name (e.g. http://localhost/myfolder/index.php) or '/' (e.g., http://localhost/myfolder/).
 // e.g., bxaf_absolute_url("../test4.php", "http://bioinforx.com/test1/test2/test3.php")
@@ -62,18 +61,19 @@ if (!function_exists('bxaf_absolute_url')){
 // This function removes magic quotes from all items in an array, e.g., bxaf_remove_magic_quotes($_POST)
 if(!function_exists('bxaf_remove_magic_quotes')) {
 	function bxaf_remove_magic_quotes(&$array = NULL) {
-		if(! get_magic_quotes_gpc()) return false;
-		else {
-		   if(! is_array($array)){
-			   $array = stripslashes($array);
-		   }
-		   else {
-			   foreach($array as $key => $elem) {
-				   if(is_array($elem)) bxaf_remove_magic_quotes($elem);
-				   else $array[$key] = stripslashes($elem);
-			   }
-		   }
-		}
+        //error_log("skipping remove magic quotes");
+		// if(! get_magic_quotes_gpc()) return false;
+		// else {
+		//    if(! is_array($array)){
+		// 	   $array = stripslashes($array);
+		//    }
+		//    else {
+		// 	   foreach($array as $key => $elem) {
+		// 		   if(is_array($elem)) bxaf_remove_magic_quotes($elem);
+		// 		   else $array[$key] = stripslashes($elem);
+		// 	   }
+		//    }
+		// }
 		return true;
 	}
 }
@@ -611,6 +611,5 @@ if (!function_exists('bxaf_test')){
 	}
 
 }
-
 
 ?>

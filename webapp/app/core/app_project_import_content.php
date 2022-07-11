@@ -48,7 +48,7 @@ echo "<form id='form_application' action='javascript:void(0);' method='post' rol
 	}
 	
 	
-	if (isAdminUser){
+    if (isAdminUser()){
 		echo "<div class='row'>";
 			echo "<div class='col-lg-12'>";
 
@@ -68,7 +68,7 @@ echo "<form id='form_application' action='javascript:void(0);' method='post' rol
 	}
 	
 	
-	if (isAdminUser){
+    if (isAdminUser()){
 		echo "<div class='row'>";
 		echo "<div class='col-xl-12 col-lg-12 col-md-12'>";
 			echo "<div class='form-group row'>";

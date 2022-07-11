@@ -72,9 +72,11 @@ $allColumns = getSearchableColumns($appObj['Table']);
 
 echo "<div class='row'>";
 	echo "<div class='col-12'>";
-		unset($actions);
-		echo "<p>" . implode(" &nbsp; &nbsp; ", $actions) . "</p>";
-	echo "</div>";
+if (isset($actions)) {
+    #		unset($actions);
+    echo "<p>" . implode(" &nbsp; &nbsp; ", $actions) . "</p>";
+}
+     echo "</div>";
 echo "</div>";
 
 	
