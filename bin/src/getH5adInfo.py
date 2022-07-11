@@ -34,11 +34,12 @@ def main():
             'annotation':{},
             'genes':genes}
 
-    obs=D.obs.select_dtypes('category')
+    obs=D.obs.select_dtypes(['category', 'object'])
 
     for one in obs.columns:
-        #if obs[one].nunique() < 100:
-        #    continue
+        ## skip annotations with more than 100 values
+        if obs[one].nunique() > 100:
+            continue
         info['annotation'][one]={k:int(v) for k,v in obs[one].value_counts().to_dict().items()}
     print(json.dumps(info))
 
