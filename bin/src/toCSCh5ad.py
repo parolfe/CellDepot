@@ -11,6 +11,7 @@ def main():
         exit()
     D = ad.read_h5ad(sys.argv[1])
     D.X = csc_matrix(D.X)
+    del D.raw ## make file writing work correctly on some datasets.
     D.write("%s/%s"%(sys.argv[2],os.path.basename(sys.argv[1])))
 
 if __name__ == "__main__":
