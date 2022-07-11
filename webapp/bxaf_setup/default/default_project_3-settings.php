@@ -11,8 +11,7 @@ $BXAF_CONFIG_CUSTOM['SETTINGS']['Annotation_Group_Limit']['Browse'] = 100;
 //Review Single Record
 $BXAF_CONFIG_CUSTOM['SETTINGS']['Annotation_Group_Limit']['Review'] = 100;
 
-$BXAF_CONFIG_CUSTOM['SETTINGS']['Annotation_Group_Default'] = 
-array('celltype', 'CellTypes', 'Annotation', 'Anot', 'Cluster', 'Clustering');
+$BXAF_CONFIG_CUSTOM['SETTINGS']['Annotation_Group_Default'] = array('celltype', 'CellTypes', 'Annotation', 'Anot', 'Cluster', 'Clustering', 'cell_type', 'ANATOMY', 'ANATOMY_path_from_root');
 
 $BXAF_CONFIG_CUSTOM['SETTINGS']['Annotation_Group_Edit_Distance'] = 1;
 
